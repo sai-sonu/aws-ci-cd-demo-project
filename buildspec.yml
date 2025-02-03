@@ -1,1 +1,18 @@
+version: 0.2
 
+phases:
+  install:
+    runtime-version:
+      ptyhon: 3.11
+  pre_build:
+    commands:
+      - pip install -r requirements.txt
+  build:
+    commands:
+      - echo "Building docker Image"
+      - docker build -t ""
+      - docker push ""
+      # - echo "Hello World"
+  post_build:
+    commands:
+      - echo "Build is Successfull"
